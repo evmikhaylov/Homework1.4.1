@@ -150,5 +150,23 @@ namespace Homework_01
         {
             this.Workers.RemoveAll(e => e.FirstName == CurrentName);//Удаление работников чьё имя Удовлетворяет выбранному CurrentName
         }
+
+        // Увольнение по фамилии
+        public void DeleteWorkerBylastName(string CurrentLastName)
+        {
+            this.Workers.RemoveAll(e => e.LastName == CurrentLastName);
+        }
+
+        // увольнения по минимальной зп
+        public void DeleteWorkerByMinSalary(int MinSalary)
+        {
+            this.Workers.RemoveAll(e => e.Salary < MinSalary);
+        }
+
+        // увольнения по макс возрасту 
+        public void DeleteWorkerByAge(int CurrentAge)
+        {
+            this.Workers.RemoveAll(e => e.Age > CurrentAge);
+        }
     }
 }
